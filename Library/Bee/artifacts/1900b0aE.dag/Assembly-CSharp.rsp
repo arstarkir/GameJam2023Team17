@@ -360,6 +360,8 @@
 "Assets/Scripts/ExitScr.cs"
 "Assets/Scripts/Food.cs"
 "Assets/Scripts/GatePointGenerator.cs"
+"Assets/Scripts/Inventory/IdSystem.cs"
+"Assets/Scripts/Inventory/Inventory.cs"
 "Assets/Scripts/Order.cs"
 "Assets/Scripts/SceneController.cs"
 -langversion:9.0
