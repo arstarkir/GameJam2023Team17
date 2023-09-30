@@ -61,8 +61,12 @@
     <Compile Include="Assets\Scripts\GatePointGenerator.cs" />
     <Compile Include="Assets\Scripts\PointClickUI.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
+    <Compile Include="Assets\Cherian\Scripts\GroundGenerator1.cs" />
+    <Compile Include="Assets\Scripts\Food.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Cherian\Scripts\VehicleCameraController.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Cherian\Scripts\CustomVehicleController.cs" />
     <Compile Include="Assets\Scripts\Inventory\IdSystem.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\ExitScr.cs" />

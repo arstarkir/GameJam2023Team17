@@ -4,12 +4,15 @@ using Unity.VisualScripting;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Profiling;
+using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
     [SerializeField] Camera mCamera;
+    [SerializeField] GameObject newOrder;
     IdSystem idSystem;
 
     [SerializeField] int numOfSlot;
@@ -21,6 +24,7 @@ public class Inventory : MonoBehaviour
     bool justStarted = false; // for a bug wich I don't know how to fix(
     void Start()
     {
+        newOrder.SetActive(false);
         idSystem = this.gameObject.GetComponent<IdSystem>();
 
         //Image tempIMG = slot.GetComponent<Image>();
@@ -36,7 +40,35 @@ public class Inventory : MonoBehaviour
         }
         justStarted = true;
         VisualizeInv();
+        //NewOrder();
     }
+
+    //void NewOrder()
+    //{
+    //    Item newOrderItem = idSystem.ARcipe();
+    //    foreach (var childTemp in newOrder.transform.)
+    //    {
+    //        GameObject child = (GameObject)childTemp;
+    //        Debug.Log(child.name);
+    //        if (child.name == "FoodIcon")
+    //            child.GetComponent<Image>().sprite = newOrderItem.sprite;
+    //        if(child.name == "FoodName")
+    //            child.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title+ newOrderItem.title;
+    //        if(child.name == "PictureOfAComponent1")
+    //           child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component1ID).sprite;
+    //        if (child.name == "PictureOfAComponent2")
+    //            child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component2ID).sprite;
+    //        if (child.name == "PictureOfAComponent3")
+    //            child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component3ID).sprite;
+    //        if (child.name == "NameOfAComponent1")
+    //            child.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title;
+    //        if (child.name == "NameOfAComponent2")
+    //            child.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component2ID).title;
+    //        if (child.name == "NameOfAComponent3")
+    //            child.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component3ID).title;
+    //    }
+    //    newOrder.SetActive(true);
+    //}
 
     private void Update()
     {
