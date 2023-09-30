@@ -80,14 +80,25 @@ public class IdSystem : MonoBehaviour
                         break;
                     case 3:
                         if (part == "1")
-                            newItem.isSellabel = true;
-                        else newItem.isSellabel = false;
+                            newItem.isOrder = true;
+                        else newItem.isOrder = false;
                         break;
                     case 4:
-                        if (newItem.isSellabel == true)
+                        if (newItem.isOrder == true)
                             newItem.points = float.Parse(part);
                         break;
-
+                    case 5:
+                        if (newItem.isOrder == true)
+                            newItem.component1ID = int.Parse(part);
+                        break;
+                    case 6:
+                        if (newItem.isOrder == true)
+                            newItem.component2ID = int.Parse(part);
+                        break;
+                    case 7:
+                        if (newItem.isOrder == true)
+                            newItem.component3ID = int.Parse(part);
+                        break;
                 }   
                 i++;
             }
@@ -103,10 +114,13 @@ public class Item
     public string title { get; set; } // title = the name of a sprite and gameobject
     public int amount { get; set; }
     public Sprite sprite { get; set; }
-    public bool isSellabel { get; set; }
+    public bool isOrder { get; set; }
+    public int component1ID { get; set; }
+    public int component2ID { get; set; }
+    public int component3ID { get; set; }
     public float points { get; set; }
     IdSystem idSystem;
-    public Item(int givenItemID = 0, int givenAmount = 0, string givenTitel = null, Sprite givenSprite = null, float givenCost = 0)
+    public Item(int givenItemID = 0, int givenAmount = 0, string givenTitel = null, Sprite givenSprite = null, float givenCost = 0, int givenComponent1ID = -1, int givenComponent2ID = -1, int givenComponent3ID = -1)
     {
         points = givenCost;
         amount = givenAmount;
@@ -121,6 +135,9 @@ public class Item
         sprite = item.sprite;
         points = item.points;
         amount = item.amount;
-        isSellabel = item.isSellabel;
+        isOrder = item.isOrder;
+        component1ID = item.component1ID;
+        component2ID = item.component2ID;
+        component3ID = item.component3ID;
     }
 }
