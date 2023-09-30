@@ -85,6 +85,7 @@ public class IdSystem : MonoBehaviour
                         break;
 
                 }
+                Debug.Log(part.ToString());
                 i++;
             }
 
