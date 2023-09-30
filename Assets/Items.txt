@@ -1,1 +1,7 @@
-0 Tomato 1 0 0
+0 mushrooms 1 0 0
+1 olives 1 0 0
+2 onion 1 0 0
+3 pepper 1 0 0
+4 pepperoni 1 0 0
+5 pizza 1 1 3
+6 sausages 1 0 0
