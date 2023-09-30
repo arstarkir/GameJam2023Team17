@@ -22,9 +22,9 @@ public class GatePointGenerator : MonoBehaviour
     void GatePointCreator()
     {
 
-                tempGm = hit1.transform.gameObject;
-                tempUI = Instantiate<GameObject>(talkUI, hit1.point, Quaternion.identity, canvas.transform);
-                tempUI.transform.position = new Vector2(150, 50);
+                //tempGm = hit1.transform.gameObject;
+                //tempUI = Instantiate<GameObject>(talkUI, hit1.point, Quaternion.identity, canvas.transform);
+                //tempUI.transform.position = new Vector2(150, 50);
 
     }
 }
