@@ -67,6 +67,7 @@
     <Compile Include="Assets\Cherian\Scripts\VehicleCameraController.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Cherian\Scripts\CustomVehicleController.cs" />
+    <Compile Include="Assets\Scripts\Oven.cs" />
     <Compile Include="Assets\Scripts\Inventory\IdSystem.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\ExitScr.cs" />
