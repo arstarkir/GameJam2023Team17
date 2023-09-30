@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,11 +34,12 @@ public class Inventory : MonoBehaviour
             inv.Add(item);
         }
         justStarted = true;
+        VisualizeInv();
     }
 
     private void Update()
     {
-        VisualizeInv();
+       
         //if (justStarted)//if you want to add some items at the start
         //{
         //    justStarted = false;
@@ -53,7 +55,8 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < numOfSlot; i++)
         {
-            if (inv[i].id != 0)
+            //Debug.Log(inv[i].sprite);
+            if (inv[i].id != -1)
             {
                 if (inv[i].amount == 0)
                 {
@@ -64,7 +67,7 @@ public class Inventory : MonoBehaviour
                 else
                 {
                     slots[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().text = inv[i].amount.ToString();
-                    slots[i].GetComponent<Image>().sprite = inv[i].sprite;
+                    slots[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + inv[i].title);
                 }
             }
         }

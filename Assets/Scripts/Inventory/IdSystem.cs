@@ -38,8 +38,10 @@ public class IdSystem : MonoBehaviour
     {
         for (int i = 0; i < idSystem.Count; i++)
         {
+           
             if (idSystem[i].id == id)
             {
+                Debug.Log(idSystem[i].title);
                 return idSystem[i];
             }
         }
@@ -72,7 +74,9 @@ public class IdSystem : MonoBehaviour
                         break;
                     case 2:
                         if (part == "1")
+                        {
                             newItem.sprite = Resources.Load<Sprite>("Sprites/Items/" + newItem.title); // file of the sprite should be in folder "Assets/Resources/Sprites/Items/"
+                        }
                         break;
                     case 3:
                         if (part == "1")
@@ -84,8 +88,7 @@ public class IdSystem : MonoBehaviour
                             newItem.points = float.Parse(part);
                         break;
 
-                }
-                Debug.Log(part.ToString());
+                }   
                 i++;
             }
 
