@@ -17,9 +17,14 @@ public class Inventory : MonoBehaviour
     [SerializeField] GameObject newOrder;
     public List<Item> OrderItems = new List<Item>();
     public List<GameObject> OrderSlots = new List<GameObject>();
+    public List<Oven> oven = new List<Oven>();
+
     public List<GameObject> OvenSlots = new List<GameObject>();
+    public List<GameObject> Outcome = new List<GameObject>();
     public List<int> OvenSlotsState = new List<int>();
+
     public List<Sprite> OvenSprites = new List<Sprite>();
+    public List<Sprite> OvenOutcomeSprites = new List<Sprite>();
     IdSystem idSystem;
 
     [SerializeField] int numOfSlot;
@@ -31,6 +36,11 @@ public class Inventory : MonoBehaviour
     bool justStarted = false; // for a bug wich I don't know how to fix(
     void Start()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            Oven ovenTemp = new Oven(OvenSlots[i], new Item(), new Item(), new Item(), Outcome[i], OvenSlotsState[i]);
+            oven.Add(ovenTemp);
+        }
         newOrder.SetActive(false);
         idSystem = this.gameObject.GetComponent<IdSystem>();
 
@@ -99,7 +109,7 @@ public class Inventory : MonoBehaviour
         OrderItems.Add(newOrderItem);
         VisualizeOrder();
         yield return new WaitForSeconds(3f);
-        for (float alpha = 1f; alpha > 0; alpha -= 0.1f)
+        for (float alpha = 1f; alpha > 0; alpha -= 0.2f)
         {
             c = alpha;
             newOrder.GetComponent<CanvasGroup>().alpha = c;
@@ -152,9 +162,51 @@ public class Inventory : MonoBehaviour
         }
         showHide = null;
     }
-    void OvenWorks(int i) 
+    void OvenWorks(int i)
     {
-        OvenSlots[i].GetComponent<Image>().sprite = OvenSprites[OvenSlotsState[i]];
+        foreach (Transform childTemp in newOrder.transform)
+        {
+            GameObject child = childTemp.gameObject;
+            if (child.name == "inerSlot1")
+                if (oven[i].OvenInerSlot1 == nullItem)
+                {
+                    child.GetComponent<Image>().sprite = inHand.sprite;
+                    oven[i].OvenInerSlot1 = inHand;
+                    inHand = null;
+                    break;
+                }
+            if (child.name == "inerSlot2")
+                if (oven[i].OvenInerSlot2 == nullItem)
+                {
+                    child.GetComponent<Image>().sprite = inHand.sprite;
+                    oven[i].OvenInerSlot2 = inHand;
+                    inHand = null;
+                    break;
+                }
+            if (child.name == "inerSlot3")
+                if (oven[i].OvenInerSlot3 == nullItem)
+                {
+                    child.GetComponent<Image>().sprite = inHand.sprite;
+                    oven[i].OvenInerSlot3 = inHand;
+                    inHand = null;
+                    break;
+                }
+
+        }
+    }
+    IEnumerator OvenTimer(int i)
+    {
+        //oven[i].Outcome
+        oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
+        yield return new WaitForSeconds(2f);
+        oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
+        yield return new WaitForSeconds(1f);
+        oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
+
+
     }
     private void Update()
     {
@@ -166,11 +218,12 @@ public class Inventory : MonoBehaviour
             for (int i = 0; i < OrderSlots.Count; i++)
                 if (IsPointerOverGameObject(OrderSlots[i]) && i < OrderItems.Count)
                     OldOrder(i);
-        if (Input.GetMouseButtonDown(0))
-            for (int i = 0; i < OvenSlots.Count; i++)
-                if (IsPointerOverGameObject(OvenSlots[i]) && OvenSlotsState[i] == 0)
+        if (Input.GetMouseButtonDown(0) && inHand != null)
+            for (int i = 0; i < oven.Count; i++)
+                if (IsPointerOverGameObject(oven[i].OvenSlots) && oven[i].OvenSlotsState == 0)
                     OvenWorks(i);
-
+        for (int i = 0; i < oven.Count; i++)
+            OvenChecker(i);
 
 
         VisualizeInv();
@@ -183,6 +236,12 @@ public class Inventory : MonoBehaviour
         //    VisualizeInv();
         //}
 
+    }
+    void OvenChecker(int i)
+    {
+
+        if (oven[i].OvenInerSlot1 != null && oven[i].OvenInerSlot1 != null && oven[i].OvenInerSlot1 != null)
+            OvenTimer(i);
     }
     public static bool IsPointerOverGameObject(GameObject gameObject)
     {
