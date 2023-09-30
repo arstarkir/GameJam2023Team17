@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Text.RegularExpressions;
 using System;
 using UnityEngine.Rendering.VirtualTexturing;
+using static UnityEditor.Progress;
 
 [ExecuteInEditMode] //needed for future conveniences
 public class IdSystem : MonoBehaviour
@@ -41,12 +42,21 @@ public class IdSystem : MonoBehaviour
            
             if (idSystem[i].id == id)
             {
-                Debug.Log(idSystem[i].title);
                 return idSystem[i];
             }
         }
 
         return null;
+    }
+    public Item ARcipe()
+    {
+        List<Item> rcipes = new List<Item>();
+        for (int i = 0; i < idSystem.Count; i++)
+            if(idSystem[i].isOrder)
+                rcipes.Add(idSystem[i]);
+        if (rcipes.Count == 0)
+            return null;
+        return rcipes[UnityEngine.Random.Range(0, rcipes.Count-1)];
     }
     public int NumOfItems()
     {
@@ -75,7 +85,7 @@ public class IdSystem : MonoBehaviour
                     case 2:
                         if (part == "1")
                         {
-                            newItem.sprite = Resources.Load<Sprite>("Sprites/Items/" + newItem.title); // file of the sprite should be in folder "Assets/Resources/Sprites/Items/"
+                            newItem.sprite = Resources.Load<Sprite>("Sprites/" + newItem.title); // file of the sprite should be in folder "Assets/Resources/Sprites/Items/"
                         }
                         break;
                     case 3:
@@ -97,7 +107,9 @@ public class IdSystem : MonoBehaviour
                         break;
                     case 7:
                         if (newItem.isOrder == true)
+                        {
                             newItem.component3ID = int.Parse(part);
+                        }
                         break;
                 }   
                 i++;
@@ -122,11 +134,15 @@ public class Item
     IdSystem idSystem;
     public Item(int givenItemID = 0, int givenAmount = 0, string givenTitel = null, Sprite givenSprite = null, float givenCost = 0, int givenComponent1ID = -1, int givenComponent2ID = -1, int givenComponent3ID = -1)
     {
+        //Debug.Log("component3ID " + givenComponent3ID);
         points = givenCost;
         amount = givenAmount;
         id = givenItemID;
         title = givenTitel;
         sprite = givenSprite;
+        component1ID = givenComponent1ID;
+        component2ID = givenComponent2ID;
+        component3ID = givenComponent3ID;
     }
     public Item(Item item)
     {
