@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2028,15 +2028,30 @@ MonoBehaviour:
   - {fileID: 1140215076}
   - {fileID: 69486856}
   Outcome:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2111298916}
+  - {fileID: 1442881874}
+  - {fileID: 737298506}
   OvenSlotsState: 000000000000000000000000
+  iner1:
+  - {fileID: 1613875986}
+  - {fileID: 1895330902}
+  - {fileID: 770800339}
+  iner2:
+  - {fileID: 696394656}
+  - {fileID: 2022059909}
+  - {fileID: 366400746}
+  iner3:
+  - {fileID: 1454509896}
+  - {fileID: 1430602055}
+  - {fileID: 1398294918}
   OvenSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  OvenOutcomeSprites: []
+  - {fileID: 21300000, guid: 9967d5cb6420cee458fd5926c738399c, type: 3}
+  - {fileID: 21300000, guid: 6ebae0bf04f562c4f92999c187f4ff73, type: 3}
+  - {fileID: 21300000, guid: 461b914a84307874d97b1c1a1e5542fb, type: 3}
+  - {fileID: 21300000, guid: 63df09919bc4dc749953d90cb549d4cc, type: 3}
+  OvenOutcomeSprites:
+  - {fileID: 21300000, guid: 1044d43ef4c910447b2608e4f33abc43, type: 3}
+  - {fileID: 21300000, guid: 88c9da5ceaac18349805612a8ad759ca, type: 3}
   numOfSlot: 7
   slots:
   - {fileID: 1009304757}
@@ -4509,7 +4524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4695,7 +4710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

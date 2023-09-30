@@ -22,6 +22,9 @@ public class Inventory : MonoBehaviour
     public List<GameObject> OvenSlots = new List<GameObject>();
     public List<GameObject> Outcome = new List<GameObject>();
     public List<int> OvenSlotsState = new List<int>();
+    public List<GameObject> iner1 = new List<GameObject>();
+    public List<GameObject> iner2 = new List<GameObject>();
+    public List<GameObject> iner3 = new List<GameObject>();
 
     public List<Sprite> OvenSprites = new List<Sprite>();
     public List<Sprite> OvenOutcomeSprites = new List<Sprite>();
@@ -33,12 +36,17 @@ public class Inventory : MonoBehaviour
     Item nullItem = new Item();
     Item inHand = new Item();
     Coroutine showHide, showHideSmall;
+    List<Coroutine> ovenTimers = new List<Coroutine>();
+    Coroutine nullCor = null;
     bool justStarted = false; // for a bug wich I don't know how to fix(
     void Start()
     {
-        for (int i = 0; i < 4; i++)
+        ovenTimers.Add(nullCor);
+        ovenTimers.Add(nullCor);
+        ovenTimers.Add(nullCor);
+        for (int i = 0; i < 3; i++)
         {
-            Oven ovenTemp = new Oven(OvenSlots[i], new Item(), new Item(), new Item(), Outcome[i], OvenSlotsState[i]);
+            Oven ovenTemp = new Oven(OvenSlots[i], iner1[i], iner2[i], iner3[i], Outcome[i], OvenSlotsState[i]);
             oven.Add(ovenTemp);
         }
         newOrder.SetActive(false);
@@ -66,7 +74,6 @@ public class Inventory : MonoBehaviour
         foreach (Transform childTemp in newOrder.transform)
         {
             GameObject child = childTemp.gameObject;
-            Debug.Log(child);
             if (child.name == "FoodIcon")
                 child.GetComponent<Image>().sprite = newOrderItem.sprite;
             if (child.name == "FoodName")
@@ -164,49 +171,82 @@ public class Inventory : MonoBehaviour
     }
     void OvenWorks(int i)
     {
-        foreach (Transform childTemp in newOrder.transform)
+        if (oven[i].Iner1.GetComponent<Image>().sprite == null)
         {
-            GameObject child = childTemp.gameObject;
-            if (child.name == "inerSlot1")
-                if (oven[i].OvenInerSlot1 == nullItem)
-                {
-                    child.GetComponent<Image>().sprite = inHand.sprite;
-                    oven[i].OvenInerSlot1 = inHand;
-                    inHand = null;
-                    break;
-                }
-            if (child.name == "inerSlot2")
-                if (oven[i].OvenInerSlot2 == nullItem)
-                {
-                    child.GetComponent<Image>().sprite = inHand.sprite;
-                    oven[i].OvenInerSlot2 = inHand;
-                    inHand = null;
-                    break;
-                }
-            if (child.name == "inerSlot3")
-                if (oven[i].OvenInerSlot3 == nullItem)
-                {
-                    child.GetComponent<Image>().sprite = inHand.sprite;
-                    oven[i].OvenInerSlot3 = inHand;
-                    inHand = null;
-                    break;
-                }
-
+            oven[i].Iner1.GetComponent<Image>().sprite = inHand.sprite;
+            Color newColor = oven[i].Iner1.GetComponent<Image>().color;
+            newColor.a = 1;
+            oven[i].Iner1.GetComponent<Image>().color = newColor;
+            oven[i].OvenInerSlot1 = inHand;
+            inHand = null;
         }
+        else
+        if (oven[i].Iner2.GetComponent<Image>().sprite == null)
+        {
+            oven[i].Iner2.GetComponent<Image>().sprite = inHand.sprite;
+            Color newColor = oven[i].Iner2.GetComponent<Image>().color;
+            newColor.a = 1;
+            oven[i].Iner2.GetComponent<Image>().color = newColor;
+            oven[i].OvenInerSlot2 = inHand;
+            inHand = null;
+        }
+        else
+        if (oven[i].Iner3.GetComponent<Image>().sprite == null)
+        {
+            oven[i].Iner3.GetComponent<Image>().sprite = inHand.sprite;
+            Color newColor = oven[i].Iner3.GetComponent<Image>().color;
+            newColor.a = 1;
+            oven[i].Iner3.GetComponent<Image>().color = newColor;
+            oven[i].OvenInerSlot3 = inHand;
+            inHand = null;
+        }
+    }
+    void TakeFromOven(int i)
+    {
+
     }
     IEnumerator OvenTimer(int i)
     {
         //oven[i].Outcome
         oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
         oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
-        yield return new WaitForSeconds(2f);
-        oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
-        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
         yield return new WaitForSeconds(1f);
         oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
         oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
-
-
+        for (int j = 0; j < 10; j++)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (IsPointerOverGameObject(oven[i].OvenSlots))
+                {
+                    TakeFromOven(i);
+                    StopCoroutine(ovenTimers[i]);
+                }
+                if (IsPointerOverGameObject(oven[i].Outcome))
+                {
+                    TakeFromOven(i);
+                    StopCoroutine(ovenTimers[i]);
+                }
+                if (IsPointerOverGameObject(oven[i].Iner1))
+                {
+                    TakeFromOven(i);
+                    StopCoroutine(ovenTimers[i]);
+                }
+                if (IsPointerOverGameObject(oven[i].Iner2))
+                {
+                    TakeFromOven(i);
+                    StopCoroutine(ovenTimers[i]);
+                }
+                if (IsPointerOverGameObject(oven[i].Iner3))
+                {
+                    TakeFromOven(i);
+                    StopCoroutine(ovenTimers[i]);
+                }
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+        oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
     }
     private void Update()
     {
@@ -239,9 +279,13 @@ public class Inventory : MonoBehaviour
     }
     void OvenChecker(int i)
     {
-
-        if (oven[i].OvenInerSlot1 != null && oven[i].OvenInerSlot1 != null && oven[i].OvenInerSlot1 != null)
-            OvenTimer(i);
+        if (ovenTimers[i] == null && oven[i].Iner1.GetComponent<Image>().sprite != null
+            && oven[i].Iner2.GetComponent<Image>().sprite != null 
+            && oven[i].Iner3.GetComponent<Image>().sprite != null)
+        {
+            ovenTimers[i] = StartCoroutine(OvenTimer(i));
+            Debug.Log("Something");
+        }
     }
     public static bool IsPointerOverGameObject(GameObject gameObject)
     {
