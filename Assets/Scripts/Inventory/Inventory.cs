@@ -1,0 +1,240 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
+using UnityEditorInternal.Profiling.Memory.Experimental;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.Profiling;
+using UnityEngine.Rendering.VirtualTexturing;
+using UnityEngine.UI;
+using UnityEngine.XR;
+
+public class Inventory : MonoBehaviour
+{
+    [SerializeField] Canvas canvas;
+    [SerializeField] Camera mCamera;
+    [SerializeField] GameObject newOrder;
+    public List<Item> OrderItems = new List<Item>();
+    public List<GameObject> OrderSlots = new List<GameObject>();
+    public List<GameObject> OvenSlots = new List<GameObject>();
+    public List<int> OvenSlotsState = new List<int>();
+    public List<Sprite> OvenSprites = new List<Sprite>();
+    IdSystem idSystem;
+
+    [SerializeField] int numOfSlot;
+    public List<Item> inv = new List<Item>();
+    public List<GameObject> slots = new List<GameObject>();
+    Item nullItem = new Item();
+    Item inHand = new Item();
+    Coroutine showHide, showHideSmall;
+    bool justStarted = false; // for a bug wich I don't know how to fix(
+    void Start()
+    {
+        newOrder.SetActive(false);
+        idSystem = this.gameObject.GetComponent<IdSystem>();
+
+        //Image tempIMG = slot.GetComponent<Image>();
+        //Color newColor = tempIMG.color;
+        //newColor.a = 0.39f;
+        //tempIMG.color = newColor;
+        inv.Clear();
+        for (int i = 0; i < numOfSlot; i++)
+        {
+            Item item = idSystem.ItemById(i);
+            item.amount = 1;
+            inv.Add(item);
+        }
+        justStarted = true;
+        VisualizeInv();
+        NewOrder();
+    }
+
+    void NewOrder()
+    {
+        Item newOrderItem = idSystem.ARcipe();
+        foreach (Transform childTemp in newOrder.transform)
+        {
+            GameObject child = childTemp.gameObject;
+            Debug.Log(child);
+            if (child.name == "FoodIcon")
+                child.GetComponent<Image>().sprite = newOrderItem.sprite;
+            if (child.name == "FoodName")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title + " " + newOrderItem.title;
+            if (child.name == "PictureOfAComponent1")
+                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component1ID).sprite;
+            if (child.name == "PictureOfAComponent2")
+                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component2ID).sprite;
+            if (child.name == "PictureOfAComponent3")
+                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component3ID).sprite;
+            if (child.name == "NameOfAComponent1")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title;
+            if (child.name == "NameOfAComponent2")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component2ID).title;
+            if (child.name == "NameOfAComponent3")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component3ID).title;
+        }
+        newOrder.SetActive(true);
+        showHide = StartCoroutine(ShowHide(newOrderItem));
+    }
+    void VisualizeOrder() //Visualizing inventory item in slot (amount/sprite)
+    {
+        for (int i = 0; i < OrderItems.Count; i++)
+        {
+            OrderSlots[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + OrderItems[i].title);
+            Color newColor = OrderSlots[i].GetComponent<Image>().color;
+            newColor.a = 1;
+            OrderSlots[i].GetComponent<Image>().color = newColor;
+        }
+    }
+    IEnumerator ShowHide(Item newOrderItem)
+    {
+        float c = newOrder.GetComponent<CanvasGroup>().alpha;
+        for (float alpha = 0f; alpha < 1; alpha += 0.1f)
+        {
+            c = alpha;
+            newOrder.GetComponent<CanvasGroup>().alpha = c;
+            yield return new WaitForSeconds(.1f);
+        }
+        OrderItems.Add(newOrderItem);
+        VisualizeOrder();
+        yield return new WaitForSeconds(3f);
+        for (float alpha = 1f; alpha > 0; alpha -= 0.1f)
+        {
+            c = alpha;
+            newOrder.GetComponent<CanvasGroup>().alpha = c;
+            yield return new WaitForSeconds(.1f);
+        }
+        showHide = null;
+    }
+    void OldOrder(int i)
+    {
+        Item newOrderItem = OrderItems[i];
+        foreach (Transform childTemp in newOrder.transform)
+        {
+            GameObject child = childTemp.gameObject;
+            Debug.Log(child);
+            if (child.name == "FoodIcon")
+                child.GetComponent<Image>().sprite = newOrderItem.sprite;
+            if (child.name == "FoodName")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title + " " + newOrderItem.title;
+            if (child.name == "PictureOfAComponent1")
+                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component1ID).sprite;
+            if (child.name == "PictureOfAComponent2")
+                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component2ID).sprite;
+            if (child.name == "PictureOfAComponent3")
+                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component3ID).sprite;
+            if (child.name == "NameOfAComponent1")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title;
+            if (child.name == "NameOfAComponent2")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component2ID).title;
+            if (child.name == "NameOfAComponent3")
+                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component3ID).title;
+        }
+        newOrder.SetActive(true);
+        showHideSmall = StartCoroutine(ShowHideSmall(newOrderItem));
+    }
+    IEnumerator ShowHideSmall(Item newOrderItem)
+    {
+        float c = newOrder.GetComponent<CanvasGroup>().alpha;
+        for (float alpha = 0f; alpha < 1; alpha += 0.2f)
+        {
+            c = alpha;
+            newOrder.GetComponent<CanvasGroup>().alpha = c;
+            yield return new WaitForSeconds(.1f);
+        }
+        yield return new WaitForSeconds(1f);
+        for (float alpha = 1f; alpha > 0; alpha -= 0.2f)
+        {
+            c = alpha;
+            newOrder.GetComponent<CanvasGroup>().alpha = c;
+            yield return new WaitForSeconds(.1f);
+        }
+        showHide = null;
+    }
+    void OvenWorks(int i) 
+    {
+        OvenSlots[i].GetComponent<Image>().sprite = OvenSprites[OvenSlotsState[i]];
+    }
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+            for (int i = 0; i < numOfSlot; i++)
+                if (IsPointerOverGameObject(slots[i]))
+                    inHand = inv[i];
+        if (Input.GetMouseButtonDown(0) && showHide == null)
+            for (int i = 0; i < OrderSlots.Count; i++)
+                if (IsPointerOverGameObject(OrderSlots[i]) && i < OrderItems.Count)
+                    OldOrder(i);
+        if (Input.GetMouseButtonDown(0))
+            for (int i = 0; i < OvenSlots.Count; i++)
+                if (IsPointerOverGameObject(OvenSlots[i]) && OvenSlotsState[i] == 0)
+                    OvenWorks(i);
+
+
+
+        VisualizeInv();
+        //if (justStarted)//if you want to add some items at the start
+        //{
+        //    justStarted = false;
+        //    inv[0] = idSystem.ItemById(1);
+        //    inv[0].amount = 9;
+        //    inv[16] = idSystem.ItemById(1);
+        //    VisualizeInv();
+        //}
+
+    }
+    public static bool IsPointerOverGameObject(GameObject gameObject)
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = Input.mousePosition;
+        List<RaycastResult> raysastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, raysastResults);
+        return raysastResults.Any(x => x.gameObject == gameObject);
+    }
+    void VisualizeInv() //Visualizing inventory item in slot (amount/sprite)
+    {
+        for (int i = 0; i < inv.Count; i++)
+        {
+            //Debug.Log(inv[i].sprite);
+            if (inv[i].id != -1)
+            {
+                if (inv[i].amount == 0)
+                {
+                    inv[i] = nullItem;
+                    slots[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().text = " ";
+                    slots[i].GetComponent<Image>().sprite = inv[i].sprite;
+                }
+                else
+                {
+                    slots[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().text = inv[i].amount.ToString();
+                    slots[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + inv[i].title);
+                }
+            }
+        }
+    }
+    public bool AddItem(Item item)
+    {
+        for (int i = 0; i < numOfSlot; i++)
+        {
+            if (inv.ElementAt(i).id == item.id)
+            {
+                inv[i].amount += item.amount;
+                VisualizeInv();
+                return true;
+            }
+        }
+        for (int i = 0; i < numOfSlot; i++)
+        {
+            if (inv.ElementAt(i) == nullItem)
+            {
+                inv[i] = item;
+                VisualizeInv();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //public void RemoveItem(Item item) { for (int i = 0; i < numOfSlot; i++) { inv[i] = (inv.ElementAt(i) == item) ? (inv[i] = (inv[i].amount <= 1) ? nullItem : new Item(inv[i].id, inv[i].amount - 1)) : inv[i]; } VisualizeInv(); }
+}

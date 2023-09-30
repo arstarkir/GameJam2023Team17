@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/arsta/SpeedCooking
+C:/Users/arsta/GameJam2023Team17/SpeedCooking
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51604
-Successfully changed project path to: C:/Users/arsta/SpeedCooking
-C:/Users/arsta/SpeedCooking
+59715
+Successfully changed project path to: C:/Users/arsta/GameJam2023Team17/SpeedCooking
+C:/Users/arsta/GameJam2023Team17/SpeedCooking
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,15 +49,15 @@ C:/Users/arsta/SpeedCooking
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21016] Host "[IP] 26.133.111.36 [Port] 0 [Flags] 2 [Guid] 431743129 [EditorId] 431743129 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-20U4N16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12936] Host "[IP] 26.133.111.36 [Port] 0 [Flags] 2 [Guid] 2061632937 [EditorId] 2061632937 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-20U4N16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [21016] Host "[IP] 26.133.111.36 [Port] 0 [Flags] 2 [Guid] 431743129 [EditorId] 431743129 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-20U4N16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12936] Host "[IP] 26.133.111.36 [Port] 0 [Flags] 2 [Guid] 2061632937 [EditorId] 2061632937 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-20U4N16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 6.84 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 73.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.0f1 (fb119bb0b476)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/arsta/SpeedCooking/Assets
+[Subsystems] Discovering subsystems at path C:/Users/arsta/GameJam2023Team17/SpeedCooking/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -69,48 +69,48 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56024
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009307 seconds.
-- Loaded All Assemblies, in  0.342 seconds
+Registered in 0.007853 seconds.
+- Loaded All Assemblies, in  0.759 seconds
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.271 seconds
-Domain Reload Profiling: 611ms
-	BeginReloadAssembly (85ms)
+- Finished resetting the current domain, in  0.232 seconds
+Domain Reload Profiling: 989ms
+	BeginReloadAssembly (80ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (151ms)
-		LoadAssemblies (83ms)
+	RebuildCommonClasses (163ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (454ms)
+		LoadAssemblies (78ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (144ms)
-			TypeCache.Refresh (143ms)
-				TypeCache.ScanAssembly (131ms)
+		AnalyzeDomain (448ms)
+			TypeCache.Refresh (447ms)
+				TypeCache.ScanAssembly (260ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (272ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (233ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (203ms)
+		SetupLoadedEditorAssemblies (184ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (13ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (135ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			ProcessInitializeOnLoadAttributes (120ms)
+			ProcessInitializeOnLoadMethodAttributes (44ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,608 +118,56 @@ Domain Reload Profiling: 611ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.564 seconds
-Refreshing native plugins compatible for Editor in 2.86 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.027 seconds
+Refreshing native plugins compatible for Editor in 2.84 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.374 seconds
-Domain Reload Profiling: 936ms
-	BeginReloadAssembly (106ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (21ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (387ms)
-		LoadAssemblies (223ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (212ms)
-			TypeCache.Refresh (200ms)
-				TypeCache.ScanAssembly (190ms)
-			ScanForSourceGeneratedMonoScriptInfo (10ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (375ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (270ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (48ms)
-			ProcessInitializeOnLoadAttributes (191ms)
-			ProcessInitializeOnLoadMethodAttributes (14ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 3.70 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3065 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (56.2 KB). Loaded Objects now: 3529.
-Memory consumption went from 115.9 MB to 115.9 MB.
-Total: 4.978800 ms (FindLiveObjects: 0.378700 ms CreateObjectMapping: 0.314400 ms MarkObjects: 4.149900 ms  DeleteObjects: 0.134300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 2642.099310 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4fe85251aa2e89732c359432baa2c3') in 0.002100 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/MainMenuCanvas.prefab
-  artifactKey: Guid(69df8a3a45156a643a94facaec072fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MainMenuCanvas.prefab using Guid(69df8a3a45156a643a94facaec072fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b99cc8633ea5decbe44e31e3d5ae3990') in 0.034040 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 145
-========================================================================
-Received Import Request.
-  Time since last request: 8.638431 seconds.
-  path: Assets/Prefabs
-  artifactKey: Guid(8d713b990522b454a98aa6a8187e6965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs using Guid(8d713b990522b454a98aa6a8187e6965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a4b04de93a6bb06a7a2e4d406740184') in 0.000416 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.530071 seconds.
-  path: Assets/NewBehaviourScript.cs
-  artifactKey: Guid(d652ce2ba4c27044392f4623c7d5de57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NewBehaviourScript.cs using Guid(d652ce2ba4c27044392f4623c7d5de57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0928eac684e161170d051b7d504a4687') in 0.000424 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.537 seconds
-Refreshing native plugins compatible for Editor in 2.74 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.597 seconds
-Domain Reload Profiling: 1132ms
-	BeginReloadAssembly (125ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (343ms)
-		LoadAssemblies (200ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (189ms)
-			TypeCache.Refresh (186ms)
-				TypeCache.ScanAssembly (177ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (598ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (256ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (51ms)
-			ProcessInitializeOnLoadAttributes (173ms)
-			ProcessInitializeOnLoadMethodAttributes (15ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 3.67 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3057 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.4 KB). Loaded Objects now: 3533.
-Memory consumption went from 114.8 MB to 114.7 MB.
-Total: 2.420000 ms (FindLiveObjects: 0.231700 ms CreateObjectMapping: 0.089200 ms MarkObjects: 2.052800 ms  DeleteObjects: 0.045300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 13.514165 seconds.
-  path: Assets/Scripts
-  artifactKey: Guid(a1764a24cbc73c545a41f43310671948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(a1764a24cbc73c545a41f43310671948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea6fbf19231678c2f0fca44d5aa94f9a') in 0.001476 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 12.114636 seconds.
-  path: Assets/Matireals
-  artifactKey: Guid(ed2ade4d607d19d489471ceb7ad739dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Matireals using Guid(ed2ade4d607d19d489471ceb7ad739dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fd584bc5b4719f344f175f2d8e6cdcc') in 0.000507 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 731.612809 seconds.
-  path: Assets/Scripts/ExitScr.cs
-  artifactKey: Guid(b0491d81390dd1846a367b2915835cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ExitScr.cs using Guid(b0491d81390dd1846a367b2915835cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13138e770286b8c05578d0d4b07a632') in 0.000504 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.572 seconds
-Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.232 seconds
-Domain Reload Profiling: 1802ms
-	BeginReloadAssembly (113ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (387ms)
-		LoadAssemblies (231ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (202ms)
-			TypeCache.Refresh (198ms)
-				TypeCache.ScanAssembly (186ms)
-			ScanForSourceGeneratedMonoScriptInfo (2ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (1232ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (270ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (50ms)
-			ProcessInitializeOnLoadAttributes (186ms)
-			ProcessInitializeOnLoadMethodAttributes (16ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Refreshing native plugins compatible for Editor in 4.84 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3071 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3537.
-Memory consumption went from 118.8 MB to 118.1 MB.
-Total: 2.955400 ms (FindLiveObjects: 0.303800 ms CreateObjectMapping: 0.232500 ms MarkObjects: 2.095400 ms  DeleteObjects: 0.320100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 55.292415 seconds.
-  path: Assets/Scripts/ExitScr.cs
-  artifactKey: Guid(b0491d81390dd1846a367b2915835cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ExitScr.cs using Guid(b0491d81390dd1846a367b2915835cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b701aa85e88fc719369a18eb3b235e23') in 0.001843 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.592 seconds
-Refreshing native plugins compatible for Editor in 2.96 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.070 seconds
-Domain Reload Profiling: 1660ms
-	BeginReloadAssembly (121ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (410ms)
-		LoadAssemblies (235ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (224ms)
-			TypeCache.Refresh (218ms)
-				TypeCache.ScanAssembly (205ms)
-			ScanForSourceGeneratedMonoScriptInfo (3ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (1070ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (241ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (46ms)
-			ProcessInitializeOnLoadAttributes (164ms)
-			ProcessInitializeOnLoadMethodAttributes (13ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3071 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3540.
-Memory consumption went from 118.8 MB to 118.1 MB.
-Total: 2.778200 ms (FindLiveObjects: 0.232600 ms CreateObjectMapping: 0.100500 ms MarkObjects: 2.145700 ms  DeleteObjects: 0.298500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 66.425205 seconds.
-  path: Assets/Scripts/SceneController.cs
-  artifactKey: Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SceneController.cs using Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25cd97c3ea257ca54607676334f06ea9') in 0.001888 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.540 seconds
-Refreshing native plugins compatible for Editor in 2.68 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.693 seconds
-Domain Reload Profiling: 1231ms
-	BeginReloadAssembly (122ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (357ms)
-		LoadAssemblies (217ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (190ms)
-			TypeCache.Refresh (185ms)
-				TypeCache.ScanAssembly (176ms)
-			ScanForSourceGeneratedMonoScriptInfo (2ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (693ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (289ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (55ms)
-			ProcessInitializeOnLoadAttributes (195ms)
-			ProcessInitializeOnLoadMethodAttributes (16ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 2.77 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3544.
-Memory consumption went from 118.8 MB to 118.1 MB.
-Total: 3.909500 ms (FindLiveObjects: 0.387700 ms CreateObjectMapping: 0.244300 ms MarkObjects: 2.902500 ms  DeleteObjects: 0.373800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 4.795843 seconds.
-  path: Assets/Scripts/SceneController.cs
-  artifactKey: Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SceneController.cs using Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c4fd0d9ea71a7f635a5d758dc962c09') in 0.001835 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 100.111040 seconds.
-  path: Assets/Scripts/SceneController.cs
-  artifactKey: Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SceneController.cs using Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfdf261cee7ae1016c6632e371a5d7bb') in 0.000555 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.354767 seconds.
-  path: Assets/Scripts/SceneController.cs
-  artifactKey: Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SceneController.cs using Guid(eb977cdeafc81e341993c75d797154da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da4633842950c11e31c3589237451f3') in 0.000454 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.571 seconds
-Refreshing native plugins compatible for Editor in 2.78 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.630 seconds
-Domain Reload Profiling: 1199ms
-	BeginReloadAssembly (130ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (38ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (375ms)
-		LoadAssemblies (210ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (219ms)
-			TypeCache.Refresh (214ms)
-				TypeCache.ScanAssembly (203ms)
-			ScanForSourceGeneratedMonoScriptInfo (2ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (631ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (258ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (46ms)
-			ProcessInitializeOnLoadAttributes (179ms)
-			ProcessInitializeOnLoadMethodAttributes (14ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3547.
-Memory consumption went from 118.8 MB to 118.1 MB.
-Total: 3.180200 ms (FindLiveObjects: 0.322600 ms CreateObjectMapping: 0.207100 ms MarkObjects: 2.315600 ms  DeleteObjects: 0.333900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.533 seconds
-Refreshing native plugins compatible for Editor in 2.65 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.655 seconds
-Domain Reload Profiling: 1185ms
-	BeginReloadAssembly (113ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (361ms)
-		LoadAssemblies (196ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (210ms)
-			TypeCache.Refresh (206ms)
-				TypeCache.ScanAssembly (197ms)
-			ScanForSourceGeneratedMonoScriptInfo (2ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (655ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (268ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (51ms)
-			ProcessInitializeOnLoadAttributes (184ms)
-			ProcessInitializeOnLoadMethodAttributes (14ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Script is not up to date after domain reload: guid(b0491d81390dd1846a367b2915835cae) path("Assets/Scripts/ExitScr.cs") state(2)
-Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3549.
-Memory consumption went from 119.1 MB to 118.4 MB.
-Total: 3.219600 ms (FindLiveObjects: 0.232200 ms CreateObjectMapping: 0.075200 ms MarkObjects: 2.539300 ms  DeleteObjects: 0.371800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.513 seconds
-Refreshing native plugins compatible for Editor in 2.79 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.620 seconds
-Domain Reload Profiling: 1131ms
+- Finished resetting the current domain, in  0.434 seconds
+Domain Reload Profiling: 2459ms
 	BeginReloadAssembly (116ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (30ms)
-	RebuildCommonClasses (25ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (29ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (28ms)
-	LoadAllAssembliesAndSetupDomain (334ms)
-		LoadAssemblies (188ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (1834ms)
+		LoadAssemblies (1649ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (188ms)
-			TypeCache.Refresh (183ms)
-				TypeCache.ScanAssembly (173ms)
-			ScanForSourceGeneratedMonoScriptInfo (2ms)
+		AnalyzeDomain (237ms)
+			TypeCache.Refresh (221ms)
+				TypeCache.ScanAssembly (209ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (621ms)
+	FinalizeReload (435ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (244ms)
+		SetupLoadedEditorAssemblies (308ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (4ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (47ms)
-			ProcessInitializeOnLoadAttributes (164ms)
-			ProcessInitializeOnLoadMethodAttributes (13ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (220ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 2.68 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 3.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3073 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3553.
-Memory consumption went from 119.1 MB to 118.4 MB.
-Total: 2.502500 ms (FindLiveObjects: 0.218200 ms CreateObjectMapping: 0.128200 ms MarkObjects: 1.859600 ms  DeleteObjects: 0.295900 ms)
+Unloading 3093 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (56.3 KB). Loaded Objects now: 3559.
+Memory consumption went from 120.5 MB to 120.5 MB.
+Total: 3.032000 ms (FindLiveObjects: 0.262300 ms CreateObjectMapping: 0.150200 ms MarkObjects: 2.518900 ms  DeleteObjects: 0.098600 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
@@ -734,395 +182,527 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 141.642223 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(580629649db3ce642bbff82f963a36e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(580629649db3ce642bbff82f963a36e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a22c59ae0eeaaa6e6f219723bfa479cb') in 0.002062 seconds
+  Time since last request: 72018.387924 seconds.
+  path: Assets/Cherian
+  artifactKey: Guid(df68c59cff2d6904bb02e1f68a268aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian using Guid(df68c59cff2d6904bb02e1f68a268aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eefa73d0066deff1485ac4662a8b1566') in 0.002523 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 16.169340 seconds.
-  path: Assets/Scenes/MainWorld1.unity
-  artifactKey: Guid(7b9f5c64b86da9543a2cb9aa021dc1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainWorld1.unity using Guid(7b9f5c64b86da9543a2cb9aa021dc1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b0a6b604728c33361528b6425e134cd') in 0.000549 seconds
+  Time since last request: 0.000094 seconds.
+  path: Assets/Cherian/Prefabs/Cube.prefab
+  artifactKey: Guid(a9e12948e026c374693a7be476b77aab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Cube.prefab using Guid(a9e12948e026c374693a7be476b77aab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15663ed364194e1c102bc8629e5f595d') in 0.093229 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Cherian/Prefabs
+  artifactKey: Guid(e72eb85873125ae489d46e4b56a9fc41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs using Guid(e72eb85873125ae489d46e4b56a9fc41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5670093248592075f0cfd15bb4f19e05') in 0.000448 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 5.700778 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c7275ad712a121dfda3e94eec0b1071') in 0.000414 seconds
+  Time since last request: 57.692178 seconds.
+  path: Assets/Cherian/Models
+  artifactKey: Guid(8682b8f4dc9db6b41b7465a1244ed063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models using Guid(8682b8f4dc9db6b41b7465a1244ed063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '596824a4909a17fd0d0eccd77cbee2df') in 0.000382 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.087415 seconds.
+  path: Assets/Cherian/Models/Food Truck.fbx
+  artifactKey: Guid(b52e4f0b403363b4c8c89de1ded154ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Food Truck.fbx using Guid(b52e4f0b403363b4c8c89de1ded154ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56a89d6ce10b953bd14d0d7429c8e799') in 0.122279 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 107
+========================================================================
+Received Import Request.
+  Time since last request: 24.439193 seconds.
+  path: Assets/Cherian/Models/Materials
+  artifactKey: Guid(fb7ab078e23898e49a8716b1d85d7d5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials using Guid(fb7ab078e23898e49a8716b1d85d7d5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3698a034bbd09fe19164ef79b18a523c') in 0.000627 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 80.147049 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c1792e9195addcb7e99ac5ba460cbe3') in 0.050821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 305
+========================================================================
+Received Import Request.
+  Time since last request: 20.468015 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f1fe1acd9e0f622d4ea1ec44b800a85') in 0.023393 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 294
+========================================================================
+Received Import Request.
+  Time since last request: 35.824469 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b9abbd9cf66cc6a19633631a8e5cf55') in 0.021918 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 296
+========================================================================
+Received Import Request.
+  Time since last request: 7.007443 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f31be57dd2da6a1590dd4c3e5be79ec') in 0.018570 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 296
+========================================================================
+Received Import Request.
+  Time since last request: 27.333537 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd846256bcc0cb8e77bca1c9de3da0d73') in 0.020803 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 10.701176 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fd31821bb8ed05835e316bc31270d87') in 0.018387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 21.520773 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2823e0eab85c188c522ddb74ed3913dd') in 0.025547 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 21.301850 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b5553174543b40c78d4e0ee047d1447') in 0.019930 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 3.407302 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb5a3eafe5253c60f0f9b8c13cc3d752') in 0.018352 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 3.215095 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b5676ea5199d2ee3dbcd634a5538adc') in 0.018847 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 2.792560 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed55282ec842e28739b5ba926cb1c77') in 0.020171 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 1.378092 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc97cef621364d66181417176d09bdcf') in 0.017282 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 6.423056 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f7fa4d968b860d93ea4a492be057d0f') in 0.023630 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 9.240139 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e962876312c20282336526aff5c8b3ac') in 0.021533 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 8.646009 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f29dce20fbdf34369dfea60a97f68818') in 0.017786 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 6.015593 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d2ea0b21363e3a0f4a00c207baf3049') in 0.018152 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 6.623666 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfe82d3614b8f5cf0e1542960b0c347c') in 0.018277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 8.444058 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b237c9f392b7e3594f6519b5640bca') in 0.018173 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 11.068762 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac557d5e14843df670ad51838e820956') in 0.017717 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 10.645162 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57a7e6fc192719d1ff802e050dfa0366') in 0.019446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 3.403018 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0fb257ca32d2793f4cce2b64f5e632e') in 0.017792 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 7.016127 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c92397bb1d56e9b1401c608b7692ac20') in 0.018806 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 1.189257 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac607e838c3fd898711585c9a5504fb6') in 0.017077 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 4.611557 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb694fafbec1ade4dc3aca41c966564') in 0.018987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 1.788008 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af2781941fad0922e5784b359c3e520e') in 0.017790 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 1.791618 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da5e9f6ec20bbae141104226633f7b1e') in 0.016997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 12.433246 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '316308b9a4a66ebad26f5fc1ded04704') in 0.025554 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 22.316983 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd44b4d8c5213f4e920c0a9c1a80752') in 0.018407 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 12.874098 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff5a97bd2066a39027fda32b8bf12ab5') in 0.017567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 3.604174 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036eb3787adaaa2862fb8f769803713d') in 0.014368 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 1.598245 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fbcb5cde5027fc896e83e86dfab841d') in 0.014239 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 2.407770 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd5b03ef612c8e2ce0b52613e3d2809f') in 0.016660 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 1.389185 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a015982e268089315dd5862910f8df83') in 0.015227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 11.664254 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a524fc03a487f6e77f69a6daee7b52b') in 0.017420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 10.429162 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a43ce5f4b0d63bc2946989cd7185ae71') in 0.015567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 206
+========================================================================
+Received Import Request.
+  Time since last request: 34.196611 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '528d40c6629db5b2357025f5881660ae') in 0.022390 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 148
+========================================================================
+Received Import Request.
+  Time since last request: 38.197840 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df2d9ee50cd528d2cab851c3b78246c7') in 0.013517 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 4.806812 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05053b32f0571f1796142316e80ac521') in 0.019080 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 1.794304 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a8107a8ecbe269d6f6384fff553f4c4') in 0.013561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 0.990969 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '131cb961875589d816f562bd671f1b1b') in 0.014787 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 1.197942 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42668f08e80d44119057e04875f9fbd2') in 0.012906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 2.596526 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f541c7cfedae35ad0143bbf6a804be98') in 0.014768 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 5.819277 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec35c0008e9dc313ca39485b337eaba') in 0.016052 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 4.005707 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da25261d27d2f0826de08e4da816f02c') in 0.016982 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 4.620898 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ae001acb80b619bfadbb3f90d6eb290') in 0.013465 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 3.207962 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f320fb4aa35fa6480ca4166366a8bfaa') in 0.014075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 2.203011 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e9617f8a32cacdae5abf77a4f511e58') in 0.014634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 7.429023 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b239a5d7cecd4dc2a7663977a584892d') in 0.013336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 5.017566 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2d9719722de2b8054cc604c7d5d8359') in 0.016745 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 4.011296 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac668b83a3fbc5d770450b31ff379a4e') in 0.015370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 4.011441 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb80b22ed10c71ef5c02fd4a27d5471f') in 0.014062 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 2.599144 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44e99f68b48017942c48c9be694d5b8') in 0.012903 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
+========================================================================
+Received Import Request.
+  Time since last request: 16.105161 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8465f60bbe1e549a8ee7f719532ef2be') in 0.019164 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 149
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.506 seconds
-Refreshing native plugins compatible for Editor in 2.92 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.567 seconds
+Refreshing native plugins compatible for Editor in 2.76 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.686 seconds
-Domain Reload Profiling: 1191ms
-	BeginReloadAssembly (113ms)
+- Finished resetting the current domain, in  0.744 seconds
+Domain Reload Profiling: 1309ms
+	BeginReloadAssembly (123ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (30ms)
+		CreateAndSetChildDomain (35ms)
 	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (334ms)
-		LoadAssemblies (192ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (386ms)
+		LoadAssemblies (215ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (187ms)
-			TypeCache.Refresh (184ms)
-				TypeCache.ScanAssembly (173ms)
+		AnalyzeDomain (220ms)
+			TypeCache.Refresh (217ms)
+				TypeCache.ScanAssembly (207ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (687ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (302ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (55ms)
-			ProcessInitializeOnLoadAttributes (208ms)
-			ProcessInitializeOnLoadMethodAttributes (18ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 3.94 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3556.
-Memory consumption went from 118.8 MB to 118.1 MB.
-Total: 3.384400 ms (FindLiveObjects: 0.254400 ms CreateObjectMapping: 0.191500 ms MarkObjects: 2.465700 ms  DeleteObjects: 0.471800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.502 seconds
-Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.708 seconds
-Domain Reload Profiling: 1208ms
-	BeginReloadAssembly (117ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (23ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (329ms)
-		LoadAssemblies (189ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (184ms)
-			TypeCache.Refresh (181ms)
-				TypeCache.ScanAssembly (171ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (708ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (312ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (62ms)
-			ProcessInitializeOnLoadAttributes (210ms)
-			ProcessInitializeOnLoadMethodAttributes (19ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 3.29 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3073 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3559.
-Memory consumption went from 119.1 MB to 118.4 MB.
-Total: 3.492700 ms (FindLiveObjects: 0.296000 ms CreateObjectMapping: 0.269900 ms MarkObjects: 2.458500 ms  DeleteObjects: 0.464600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.521 seconds
-Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.725 seconds
-Domain Reload Profiling: 1244ms
-	BeginReloadAssembly (117ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (31ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (336ms)
-		LoadAssemblies (197ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (188ms)
-			TypeCache.Refresh (185ms)
-				TypeCache.ScanAssembly (174ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (725ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (301ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (54ms)
-			ProcessInitializeOnLoadAttributes (207ms)
-			ProcessInitializeOnLoadMethodAttributes (17ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 4.17 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3073 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3562.
-Memory consumption went from 119.1 MB to 118.4 MB.
-Total: 3.681500 ms (FindLiveObjects: 0.317000 ms CreateObjectMapping: 0.149900 ms MarkObjects: 2.813500 ms  DeleteObjects: 0.399200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 299.006329 seconds.
-  path: Assets/Matireals/Gray.mat
-  artifactKey: Guid(f6cb9d8a2891d4648a3ecb1f7521f0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Matireals/Gray.mat using Guid(f6cb9d8a2891d4648a3ecb1f7521f0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1536054817efed91fd6a9e084355d559') in 0.296914 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 59.128815 seconds.
-  path: Assets/Matireals/White.mat
-  artifactKey: Guid(2ed5e375cae3bf54ca50d958654a9e47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Matireals/White.mat using Guid(2ed5e375cae3bf54ca50d958654a9e47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd691b9318e4e606fffecb788a68a8150') in 0.014117 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 325.383211 seconds.
-  path: Assets/Matireals/Blue.mat
-  artifactKey: Guid(dd9a31dccf7de634cab88296fa3a4a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Matireals/Blue.mat using Guid(dd9a31dccf7de634cab88296fa3a4a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dce1b8fb1f8c830019bdc265a2c21084') in 0.012792 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 18.087716 seconds.
-  path: Assets/Matireals/Blue.mat
-  artifactKey: Guid(dd9a31dccf7de634cab88296fa3a4a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Matireals/Blue.mat using Guid(dd9a31dccf7de634cab88296fa3a4a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c36ef4c9d7e2dfc048f78d51b2da84e') in 0.017491 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.093 seconds
-Refreshing native plugins compatible for Editor in 3.47 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  6.640 seconds
-Domain Reload Profiling: 7731ms
-	BeginReloadAssembly (254ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (111ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (768ms)
-		LoadAssemblies (592ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (250ms)
-			TypeCache.Refresh (243ms)
-				TypeCache.ScanAssembly (222ms)
-			ScanForSourceGeneratedMonoScriptInfo (4ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (6641ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (243ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (46ms)
-			ProcessInitializeOnLoadAttributes (164ms)
-			ProcessInitializeOnLoadMethodAttributes (15ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 2.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3609.
-Memory consumption went from 123.7 MB to 122.9 MB.
-Total: 3.178200 ms (FindLiveObjects: 0.217100 ms CreateObjectMapping: 0.068300 ms MarkObjects: 2.589600 ms  DeleteObjects: 0.301800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1180.224810 seconds.
-  path: Assets/PROMETEO - Car Controller
-  artifactKey: Guid(2bb46ecae7daf6d43b10366c32cca61b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PROMETEO - Car Controller using Guid(2bb46ecae7daf6d43b10366c32cca61b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31986d28592cd3b4f3dfcfcb019eeaf4') in 0.003463 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.831791 seconds.
-  path: Assets/PROMETEO - Car Controller/Scenes
-  artifactKey: Guid(3c6489f37c0550f42ba9141718064fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PROMETEO - Car Controller/Scenes using Guid(3c6489f37c0550f42ba9141718064fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c42f21b5a04be916af2bc6d420bb083c') in 0.000439 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.864411 seconds.
-  path: Assets/PROMETEO - Car Controller/Scenes/Demo.unity
-  artifactKey: Guid(d05c07244ed6a3740be3bdad186521e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PROMETEO - Car Controller/Scenes/Demo.unity using Guid(d05c07244ed6a3740be3bdad186521e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faca559875a3ee794b0f501df49941b2') in 0.000517 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.542 seconds
-Refreshing native plugins compatible for Editor in 2.96 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.743 seconds
-Domain Reload Profiling: 1284ms
-	BeginReloadAssembly (125ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (352ms)
-		LoadAssemblies (211ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (195ms)
-			TypeCache.Refresh (190ms)
-				TypeCache.ScanAssembly (179ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (4ms)
 	FinalizeReload (744ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (313ms)
+		SetupLoadedEditorAssemblies (315ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (59ms)
+			BeforeProcessingInitializeOnLoad (60ms)
 			ProcessInitializeOnLoadAttributes (214ms)
 			ProcessInitializeOnLoadMethodAttributes (19ms)
 			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 2.76 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3612.
-Memory consumption went from 123.7 MB to 123.0 MB.
-Total: 3.416600 ms (FindLiveObjects: 0.320600 ms CreateObjectMapping: 0.196100 ms MarkObjects: 2.528400 ms  DeleteObjects: 0.370200 ms)
+Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.8 KB). Loaded Objects now: 3609.
+Memory consumption went from 121.3 MB to 121.3 MB.
+Total: 4.606500 ms (FindLiveObjects: 0.543000 ms CreateObjectMapping: 0.209800 ms MarkObjects: 3.750700 ms  DeleteObjects: 0.101600 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1140,54 +720,54 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.516 seconds
-Refreshing native plugins compatible for Editor in 2.77 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.517 seconds
+Refreshing native plugins compatible for Editor in 2.59 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.737 seconds
-Domain Reload Profiling: 1251ms
-	BeginReloadAssembly (114ms)
+- Finished resetting the current domain, in  0.711 seconds
+Domain Reload Profiling: 1226ms
+	BeginReloadAssembly (113ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (30ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (7ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
 	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (344ms)
+	LoadAllAssembliesAndSetupDomain (347ms)
 		LoadAssemblies (193ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (197ms)
-			TypeCache.Refresh (192ms)
-				TypeCache.ScanAssembly (182ms)
+			TypeCache.Refresh (195ms)
+				TypeCache.ScanAssembly (186ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (737ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (711ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (314ms)
+		SetupLoadedEditorAssemblies (318ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (10ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (59ms)
-			ProcessInitializeOnLoadAttributes (216ms)
-			ProcessInitializeOnLoadMethodAttributes (18ms)
+			BeforeProcessingInitializeOnLoad (58ms)
+			ProcessInitializeOnLoadAttributes (220ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
 			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Refreshing native plugins compatible for Editor in 3.16 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 5.07 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3077 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 3615.
-Memory consumption went from 123.9 MB to 123.2 MB.
-Total: 3.576700 ms (FindLiveObjects: 0.341600 ms CreateObjectMapping: 0.228100 ms MarkObjects: 2.655800 ms  DeleteObjects: 0.349800 ms)
+Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3612.
+Memory consumption went from 121.3 MB to 121.3 MB.
+Total: 3.581400 ms (FindLiveObjects: 0.478300 ms CreateObjectMapping: 0.205300 ms MarkObjects: 2.846300 ms  DeleteObjects: 0.050500 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1202,3 +782,389 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 87.749881 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e7fed37daa34bc70d1c5c7c383ce9a') in 0.079879 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 150
+========================================================================
+Received Import Request.
+  Time since last request: 1.722157 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f4ba7e386aad403531dc27ee92a599c') in 0.015451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 150
+========================================================================
+Received Import Request.
+  Time since last request: 3.544328 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3883b51cd2cb3d6235009d2afc578a5f') in 0.018529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 8.016947 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a7b5eaf295028eb907ab5a943a7d2f') in 0.015196 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 1.196100 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62d75200b7cdcfb3c8cd20fff4ba667f') in 0.013089 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 1.392113 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95b8be9e62baea50b72d180c64ecad9c') in 0.014021 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 6.237154 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94019b1fb621017dccde137d00e85750') in 0.017063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 2.198937 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc10a8c762aefda4f9a053184dadb06') in 0.019826 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 1.388445 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd98445beca2b3598c067704699f3c0b6') in 0.018058 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 1.998074 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15bb26b17c1571686bbc5aac700e8ade') in 0.015417 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 0.992149 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d7fef0963248edd76f990b35f09c16b') in 0.016306 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 4.199365 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaae4bee2d628fdfa456bf10240e3dc8') in 0.017792 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Import Request.
+  Time since last request: 4.209440 seconds.
+  path: Assets/Cherian/Prefabs/Food Truck.prefab
+  artifactKey: Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Prefabs/Food Truck.prefab using Guid(2a5b6dfc08a1029409e1eea6d032f66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96fe6e00e6be513b635d90c240466829') in 0.014068 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 155
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.545 seconds
+Refreshing native plugins compatible for Editor in 3.66 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.737 seconds
+Domain Reload Profiling: 1280ms
+	BeginReloadAssembly (117ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (371ms)
+		LoadAssemblies (199ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (214ms)
+			TypeCache.Refresh (211ms)
+				TypeCache.ScanAssembly (199ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (738ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (307ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (57ms)
+			ProcessInitializeOnLoadAttributes (210ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 4.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3615.
+Memory consumption went from 121.5 MB to 121.4 MB.
+Total: 3.956900 ms (FindLiveObjects: 0.440500 ms CreateObjectMapping: 0.416400 ms MarkObjects: 3.019500 ms  DeleteObjects: 0.079000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\arsta\GameJam2023Team17\SpeedCooking\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.515 seconds
+Refreshing native plugins compatible for Editor in 2.65 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.754 seconds
+Domain Reload Profiling: 1267ms
+	BeginReloadAssembly (115ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (342ms)
+		LoadAssemblies (197ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (190ms)
+			TypeCache.Refresh (187ms)
+				TypeCache.ScanAssembly (178ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (755ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (304ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (212ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 4.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (29.9 KB). Loaded Objects now: 3618.
+Memory consumption went from 121.5 MB to 121.4 MB.
+Total: 3.605600 ms (FindLiveObjects: 0.527100 ms CreateObjectMapping: 0.159300 ms MarkObjects: 2.859300 ms  DeleteObjects: 0.059100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 184.536996 seconds.
+  path: Assets/Cherian/Scenes/TestScene_Cherian.unity
+  artifactKey: Guid(038a0ad5d24bd7c4691d63c05253ac86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Scenes/TestScene_Cherian.unity using Guid(038a0ad5d24bd7c4691d63c05253ac86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceb1787d14fe5473c43829a0eec5bcc9') in 0.004300 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.023398 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_Body_MAT 1.mat
+  artifactKey: Guid(323cbe34bd65ae04eaa212c908f6bdfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_Body_MAT 1.mat using Guid(323cbe34bd65ae04eaa212c908f6bdfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833cfee8020df41bb28dad067b109ee6') in 0.064142 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.013570 seconds.
+  path: Assets/Cherian/Scripts/GroundGenerator1.cs
+  artifactKey: Guid(3430e1aa2dada6b4289ddfd5b76d4b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Scripts/GroundGenerator1.cs using Guid(3430e1aa2dada6b4289ddfd5b76d4b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb00096cfa541b4f7aa46cca48c7005') in 0.000508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.026013 seconds.
+  path: Assets/Cherian/Scenes
+  artifactKey: Guid(9a71a511d83a993418099f077c0283e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Scenes using Guid(9a71a511d83a993418099f077c0283e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad97210db5124c0ba90c214472e26a72') in 0.000532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.013115 seconds.
+  path: Assets/Cherian/Scripts/VehicleCameraController.cs
+  artifactKey: Guid(9f54c275f2bfad64c8581d8b6bd7a256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Scripts/VehicleCameraController.cs using Guid(9f54c275f2bfad64c8581d8b6bd7a256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '947e6e90a6756743a2ead70806dbb1ef') in 0.000566 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.025307 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_PizzaPepperoni_MAT.mat
+  artifactKey: Guid(3e406a94d70f4e24989ac043f5c93384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_PizzaPepperoni_MAT.mat using Guid(3e406a94d70f4e24989ac043f5c93384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49380622f6a283eaa972c04778ab4d0f') in 0.010167 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.005876 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_Tailights_MAT.mat
+  artifactKey: Guid(e796c9b02012f3e4ca1e1d2a017e58be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_Tailights_MAT.mat using Guid(e796c9b02012f3e4ca1e1d2a017e58be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adad5b61d369477b0a4356a666241a97') in 0.009535 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.014130 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_PizzaYellow_MAT.mat
+  artifactKey: Guid(8142691c11824b946abf89ce099823e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_PizzaYellow_MAT.mat using Guid(8142691c11824b946abf89ce099823e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50c14fefbc7a68d3452f0fe18145fed') in 0.010101 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.012942 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_Windows_MAT.mat
+  artifactKey: Guid(dd6fc83e3acfeb04496209f7ace55aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_Windows_MAT.mat using Guid(dd6fc83e3acfeb04496209f7ace55aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3699a6425bee531ab7749106e13866f2') in 0.010034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.071479 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_Headlights_MAT.mat
+  artifactKey: Guid(b4b32ed5115a5b54fbed4fbe78b5977e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_Headlights_MAT.mat using Guid(b4b32ed5115a5b54fbed4fbe78b5977e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9c1197659bb44eae67ab11947d97ae') in 0.010652 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.036892 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_Tires_MAT.mat
+  artifactKey: Guid(0f5b3d5ed63e7c64d97e54a25dbfbcfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_Tires_MAT.mat using Guid(0f5b3d5ed63e7c64d97e54a25dbfbcfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2095ea6c1812fa74e2bc487efbb7f076') in 0.009710 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.013905 seconds.
+  path: Assets/Scripts/Inventory/Inventory.cs
+  artifactKey: Guid(4a6b03bc38e15c44a983003e6e668608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Inventory.cs using Guid(4a6b03bc38e15c44a983003e6e668608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27450c6cff54cacd0e2dc1d6a9a1edf') in 0.000456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.014114 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_PizzaCrust_MAT.mat
+  artifactKey: Guid(3f28ce45ff4a124479f308287c6854c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_PizzaCrust_MAT.mat using Guid(3f28ce45ff4a124479f308287c6854c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef2014045b238c19f8541c701a02f21') in 0.009969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.028528 seconds.
+  path: Assets/Scripts/Food.cs
+  artifactKey: Guid(90e2eb18ddfcf7e45be2fb90ee42fef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Food.cs using Guid(90e2eb18ddfcf7e45be2fb90ee42fef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19614bb467d813573d408f16968b79d4') in 0.000473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.023150 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_Steel_MAT.mat
+  artifactKey: Guid(819eac0fe464b674b980a7bb4fabe256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_Steel_MAT.mat using Guid(819eac0fe464b674b980a7bb4fabe256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae3af22a85376420a306910ef5b2ac10') in 0.009504 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.009352 seconds.
+  path: Assets/Cherian/Scripts/CustomVehicleController.cs
+  artifactKey: Guid(a7ea8cf45b615ab42afc6ccba8907047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Scripts/CustomVehicleController.cs using Guid(a7ea8cf45b615ab42afc6ccba8907047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ac08e69a15cfae08c6cdaaaa1df7027') in 0.000453 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.030870 seconds.
+  path: Assets/Cherian/Scripts
+  artifactKey: Guid(d11508d9846f5e44496e2866b2457bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Scripts using Guid(d11508d9846f5e44496e2866b2457bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12d544bf9f182878bfa39da736698d86') in 0.000530 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.005306 seconds.
+  path: Assets/Cherian/Models/Materials/FoodTruck_Exhaust_MAT.mat
+  artifactKey: Guid(e3ebc5a2adf29634f85e6edc299e6bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cherian/Models/Materials/FoodTruck_Exhaust_MAT.mat using Guid(e3ebc5a2adf29634f85e6edc299e6bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442982c529748eec2b23077a7267264b') in 0.010034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.003049 seconds.
+  path: Assets/Scenes/MainWorld1.unity
+  artifactKey: Guid(7b9f5c64b86da9543a2cb9aa021dc1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainWorld1.unity using Guid(7b9f5c64b86da9543a2cb9aa021dc1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed537341123551678898b41b0170d8af') in 0.000497 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
