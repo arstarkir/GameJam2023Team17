@@ -363,6 +363,7 @@
 "Assets/PROMETEO - Car Controller/Scripts/CameraFollow.cs"
 "Assets/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs"
 "Assets/PROMETEO - Car Controller/Scripts/PrometeoTouchInput.cs"
+"Assets/Scripts/Delivery.cs"
 "Assets/Scripts/ExitScr.cs"
 "Assets/Scripts/Food.cs"
 "Assets/Scripts/GatePointGenerator.cs"

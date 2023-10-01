@@ -91,7 +91,9 @@ public class IdSystem : MonoBehaviour
                     return idSystem[i];
             }
         }
-        return null;
+        Item temp = new Item();
+        temp.title = "Nothing";
+        return temp;
     }
     void ConstructItemDatabase()
     {

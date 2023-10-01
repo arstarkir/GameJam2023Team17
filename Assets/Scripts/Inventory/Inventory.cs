@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,14 +14,20 @@ using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 public class Inventory : MonoBehaviour
 {
+    public int playerPoints = 0;
+
     [SerializeField] Canvas canvas;
     [SerializeField] Camera mCamera;
     [SerializeField] GameObject newOrder;
+
+    [SerializeField] GPSUI togsGetter;
+    [SerializeField] GameObject player;
 
     public List<Item> OrderItems = new List<Item>();
     public List<GameObject> OrderSlots = new List<GameObject>();
     public List<GameObject> OrderPos = new List<GameObject>();
     public List<GameObject> OrderIcon = new List<GameObject>();
+    public List<List<int>>  OrderIconToSlot = new List<List<int>>();
     public List<int> DropPos = new List<int>();
 
     List<Oven> oven = new List<Oven>();
@@ -36,6 +43,7 @@ public class Inventory : MonoBehaviour
     public List<Sprite> OvenOutcomeSprites = new List<Sprite>();
 
     public Sprite questionMark;
+    public GameObject marker;
     List<GameObject> markers = new List<GameObject>();
     IdSystem idSystem;
 
@@ -79,44 +87,70 @@ public class Inventory : MonoBehaviour
 
     void NewOrder()
     {
-        Item newOrderItem = idSystem.ARcipe();
-        foreach (Transform childTemp in newOrder.transform)
+        if(OrderItems.Count <=3)
         {
-            GameObject child = childTemp.gameObject;
-            if (child.name == "FoodIcon")
-                child.GetComponent<Image>().sprite = newOrderItem.sprite;
-            if (child.name == "FoodName")
-                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title + " " + newOrderItem.title;
-            if (child.name == "PictureOfAComponent1")
-                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component1ID).sprite;
-            if (child.name == "PictureOfAComponent2")
-                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component2ID).sprite;
-            if (child.name == "PictureOfAComponent3")
-                child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component3ID).sprite;
-            if (child.name == "NameOfAComponent1")
-                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title;
-            if (child.name == "NameOfAComponent2")
-                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component2ID).title;
-            if (child.name == "NameOfAComponent3")
-                child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component3ID).title;
+            Item newOrderItem = idSystem.ARcipe();
+            foreach (Transform childTemp in newOrder.transform)
+            {
+                GameObject child = childTemp.gameObject;
+                if (child.name == "FoodIcon")
+                    child.GetComponent<Image>().sprite = newOrderItem.sprite;
+                if (child.name == "FoodName")
+                    child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title + " " + newOrderItem.title;
+                if (child.name == "PictureOfAComponent1")
+                    child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component1ID).sprite;
+                if (child.name == "PictureOfAComponent2")
+                    child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component2ID).sprite;
+                if (child.name == "PictureOfAComponent3")
+                    child.GetComponent<Image>().sprite = idSystem.ItemById(newOrderItem.component3ID).sprite;
+                if (child.name == "NameOfAComponent1")
+                    child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component1ID).title;
+                if (child.name == "NameOfAComponent2")
+                    child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component2ID).title;
+                if (child.name == "NameOfAComponent3")
+                    child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component3ID).title;
+            }
+            int ran = UnityEngine.Random.Range(0, 6);
+            while (!isEmpty(ran))
+            {
+                ran = UnityEngine.Random.Range(0, 6);
+            }
+            DropPos.Add(ran);
+            OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().sprite = newOrderItem.sprite;
+            Color newColor = OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color;
+            newColor.a = 1;
+            OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color = newColor;
+            markers.Add(Instantiate<GameObject>(marker, OrderPos[DropPos[DropPos.Count - 1]].transform.position, Quaternion.identity, OrderPos[DropPos[DropPos.Count - 1]].transform));
+            markers[markers.Count - 1].transform.localScale = new Vector3(3, 3, 3);
+            markers[markers.Count - 1].transform.localPosition = new Vector3(0, 3, 0);
+            newOrder.SetActive(true);
+            showHide = StartCoroutine(ShowHide(newOrderItem));
+            VisualizeOrder();
         }
-        DropPos.Add(UnityEngine.Random.Range(0, 6));
-        OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().sprite = newOrderItem.sprite;
-        Color newColor = OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color;
-        newColor.a = 1;
-        OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color = newColor;
-        markers.Add(Instantiate<GameObject>(OrderPos[DropPos[DropPos.Count - 1]], OrderPos[DropPos[DropPos.Count - 1]].transform.position,Quaternion.identity, OrderPos[DropPos[DropPos.Count - 1]].transform));
-        newOrder.SetActive(true);
-        showHide = StartCoroutine(ShowHide(newOrderItem));
     }
-    void VisualizeOrder() //Visualizing inventory item in slot (amount/sprite)
+    bool isEmpty(int j)
     {
+        for (int i = 0; i < DropPos.Count; i++)
+        {
+            if (DropPos[i] == j)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    void VisualizeOrder()
+    {
+        bool breaker = false;
         for (int i = 0; i < OrderItems.Count; i++)
         {
+            //Debug.Log(OrderSlots[i].name);
             OrderSlots[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + OrderItems[i].title);
             Color newColor = OrderSlots[i].GetComponent<Image>().color;
             newColor.a = 1;
             OrderSlots[i].GetComponent<Image>().color = newColor;
+            breaker = true;
+
         }
     }
     IEnumerator ShowHide(Item newOrderItem)
@@ -223,12 +257,13 @@ public class Inventory : MonoBehaviour
                 foreach (Transform childTemp in OrderSlots[j].transform)
                 {
                     GameObject child = childTemp.gameObject;
-                    if(child.name == "Checkmark")
+                    if (child.name == "Checkmark")
                     {
                         child.gameObject.SetActive(true);
                         break;
                     }
                 }
+        oven[i].OvenSlotsState = 0;
         ovenTimers[i] = null;
         Color newColor = oven[i].Outcome.GetComponent<Image>().color;
         newColor.a = 0;
@@ -275,10 +310,10 @@ public class Inventory : MonoBehaviour
             QTE(i);
             yield return new WaitForSeconds(0.2f);
         }
-        if (idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).sprite == null)
+        if (idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).title == "Nothing")
             oven[i].Outcome.GetComponent<Image>().sprite = questionMark;
         else
-            oven[i].Outcome.GetComponent<Image>().sprite = idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).sprite; 
+            oven[i].Outcome.GetComponent<Image>().sprite = idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).sprite;
         oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
         oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[2];
         for (int j = 0; j < 100; j++)
@@ -297,6 +332,12 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
+    void TimeGod()
+    {
+
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -313,8 +354,8 @@ public class Inventory : MonoBehaviour
                     OvenWorks(i);
         for (int i = 0; i < oven.Count; i++)
             OvenChecker(i);
-
         VisualizeInv();
+        
         //if (justStarted)//if you want to add some items at the start
         //{
         //    justStarted = false;
@@ -328,7 +369,7 @@ public class Inventory : MonoBehaviour
     void OvenChecker(int i)
     {
         if (ovenTimers[i] == null && oven[i].Iner1.GetComponent<Image>().sprite != null
-            && oven[i].Iner2.GetComponent<Image>().sprite != null 
+            && oven[i].Iner2.GetComponent<Image>().sprite != null
             && oven[i].Iner3.GetComponent<Image>().sprite != null)
         {
             ovenTimers[i] = StartCoroutine(OvenTimer(i));
@@ -341,6 +382,7 @@ public class Inventory : MonoBehaviour
         eventData.position = Input.mousePosition;
         List<RaycastResult> raysastResults = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, raysastResults);
+        Debug.Log(raysastResults[0].gameObject.name);
         return raysastResults.Any(x => x.gameObject == gameObject);
     }
     void VisualizeInv() //Visualizing inventory item in slot (amount/sprite)
@@ -388,4 +430,14 @@ public class Inventory : MonoBehaviour
     }
 
     //public void RemoveItem(Item item) { for (int i = 0; i < numOfSlot; i++) { inv[i] = (inv.ElementAt(i) == item) ? (inv[i] = (inv[i].amount <= 1) ? nullItem : new Item(inv[i].id, inv[i].amount - 1)) : inv[i]; } VisualizeInv(); }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        for (int i = 0; i < togsGetter.togs.Count; i++)
+        {
+            Gizmos.DrawLine(player.transform.position, OrderPos[togsGetter.togs[i]].transform.position);
+        }
+    }
+
+
 }

@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\ExitScr.cs" />
     <Compile Include="Assets\Scripts\Order.cs" />
+    <Compile Include="Assets\Scripts\Delivery.cs" />
     <Compile Include="Assets\Cherian\Scripts\Mesh_Alpha_Fader_Script.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
   </ItemGroup>
