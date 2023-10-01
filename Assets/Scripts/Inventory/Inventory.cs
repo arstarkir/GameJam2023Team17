@@ -19,7 +19,11 @@ public class Inventory : MonoBehaviour
 
     public List<Item> OrderItems = new List<Item>();
     public List<GameObject> OrderSlots = new List<GameObject>();
-    public List<Oven> oven = new List<Oven>();
+    public List<GameObject> OrderPos = new List<GameObject>();
+    public List<GameObject> OrderIcon = new List<GameObject>();
+    public List<int> DropPos = new List<int>();
+
+    List<Oven> oven = new List<Oven>();
 
     public List<GameObject> OvenSlots = new List<GameObject>();
     public List<GameObject> Outcome = new List<GameObject>();
@@ -32,6 +36,7 @@ public class Inventory : MonoBehaviour
     public List<Sprite> OvenOutcomeSprites = new List<Sprite>();
 
     public Sprite questionMark;
+    List<GameObject> markers = new List<GameObject>();
     IdSystem idSystem;
 
     [SerializeField] int numOfSlot;
@@ -95,6 +100,12 @@ public class Inventory : MonoBehaviour
             if (child.name == "NameOfAComponent3")
                 child.GetComponent<TMPro.TextMeshProUGUI>().text = idSystem.ItemById(newOrderItem.component3ID).title;
         }
+        DropPos.Add(UnityEngine.Random.Range(0, 6));
+        OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().sprite = newOrderItem.sprite;
+        Color newColor = OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color;
+        newColor.a = 1;
+        OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color = newColor;
+        markers.Add(Instantiate<GameObject>(OrderPos[DropPos[DropPos.Count - 1]], OrderPos[DropPos[DropPos.Count - 1]].transform.position,Quaternion.identity, OrderPos[DropPos[DropPos.Count - 1]].transform));
         newOrder.SetActive(true);
         showHide = StartCoroutine(ShowHide(newOrderItem));
     }
