@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] Canvas canvas;
     [SerializeField] Camera mCamera;
     [SerializeField] GameObject newOrder;
+
     public List<Item> OrderItems = new List<Item>();
     public List<GameObject> OrderSlots = new List<GameObject>();
     public List<Oven> oven = new List<Oven>();
@@ -133,7 +134,6 @@ public class Inventory : MonoBehaviour
         foreach (Transform childTemp in newOrder.transform)
         {
             GameObject child = childTemp.gameObject;
-            Debug.Log(child);
             if (child.name == "FoodIcon")
                 child.GetComponent<Image>().sprite = newOrderItem.sprite;
             if (child.name == "FoodName")
@@ -207,17 +207,32 @@ public class Inventory : MonoBehaviour
     void TakeFromOven(int i)
     {
         StopCoroutine(ovenTimers[i]);
+        for (int j = 0; j < OrderItems.Count; j++)
+            if (OrderItems[j].title == idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).title)
+                foreach (Transform childTemp in OrderSlots[j].transform)
+                {
+                    GameObject child = childTemp.gameObject;
+                    if(child.name == "Checkmark")
+                    {
+                        child.gameObject.SetActive(true);
+                        break;
+                    }
+                }
         ovenTimers[i] = null;
         Color newColor = oven[i].Outcome.GetComponent<Image>().color;
         newColor.a = 0;
         oven[i].Outcome.GetComponent<Image>().color = newColor;
         oven[i].Iner3.GetComponent<Image>().sprite = null;
+        oven[i].OvenInerSlot3 = null;
         oven[i].Iner3.GetComponent<Image>().color = newColor;
         oven[i].Iner2.GetComponent<Image>().sprite = null;
+        oven[i].OvenInerSlot2 = null;
         oven[i].Iner2.GetComponent<Image>().color = newColor;
         oven[i].Iner1.GetComponent<Image>().sprite = null;
+        oven[i].OvenInerSlot1 = null;
         oven[i].Iner1.GetComponent<Image>().color = newColor;
         oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[0];
+        NewOrder();
     }
     void QTE(int i)
     {
@@ -255,10 +270,10 @@ public class Inventory : MonoBehaviour
             oven[i].Outcome.GetComponent<Image>().sprite = idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).sprite; 
         oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
         oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[2];
-        for (int j = 0; j < 10; j++)
+        for (int j = 0; j < 100; j++)
         {
             QTE(i);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
         oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
         oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[3];
