@@ -48,6 +48,19 @@ public class IdSystem : MonoBehaviour
 
         return null;
     }
+    public Item ItemByName(string title)
+    {
+        for (int i = 0; i < idSystem.Count; i++)
+        {
+
+            if (idSystem[i].title == title)
+            {
+                return idSystem[i];
+            }
+        }
+
+        return null;
+    }
     public Item ARcipe()
     {
         List<Item> rcipes = new List<Item>();
@@ -62,7 +75,24 @@ public class IdSystem : MonoBehaviour
     {
         return idSystem.Count;
     }
+    public Item CheckTheRcipe(int id1, int id2, int id3)
+    {
+        for (int i = 0; i < idSystem.Count; i++)
+        {
 
+            if (idSystem[i].isOrder == true)
+            {
+                if ((idSystem[i].component1ID == id1 && idSystem[i].component2ID == id2 && idSystem[i].component3ID == id3) ||
+                    (idSystem[i].component1ID == id1 && idSystem[i].component2ID == id3 && idSystem[i].component3ID == id2) ||
+                    (idSystem[i].component1ID == id2 && idSystem[i].component2ID == id1 && idSystem[i].component3ID == id3) ||
+                    (idSystem[i].component1ID == id2 && idSystem[i].component2ID == id3 && idSystem[i].component3ID == id1) ||
+                    (idSystem[i].component1ID == id3 && idSystem[i].component2ID == id1 && idSystem[i].component3ID == id2) ||
+                    (idSystem[i].component1ID == id3 && idSystem[i].component2ID == id2 && idSystem[i].component3ID == id1))
+                    return idSystem[i];
+            }
+        }
+        return null;
+    }
     void ConstructItemDatabase()
     {
         for (int j = 0; j < itemData.Count; j++)

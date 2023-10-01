@@ -9,6 +9,7 @@ using UnityEngine.Profiling;
 using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.UI;
 using UnityEngine.XR;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 public class Inventory : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class Inventory : MonoBehaviour
 
     public List<Sprite> OvenSprites = new List<Sprite>();
     public List<Sprite> OvenOutcomeSprites = new List<Sprite>();
+
+    public Sprite questionMark;
     IdSystem idSystem;
 
     [SerializeField] int numOfSlot;
@@ -203,50 +206,70 @@ public class Inventory : MonoBehaviour
     }
     void TakeFromOven(int i)
     {
-
+        StopCoroutine(ovenTimers[i]);
+        ovenTimers[i] = null;
+        Color newColor = oven[i].Outcome.GetComponent<Image>().color;
+        newColor.a = 0;
+        oven[i].Outcome.GetComponent<Image>().color = newColor;
+        oven[i].Iner3.GetComponent<Image>().sprite = null;
+        oven[i].Iner3.GetComponent<Image>().color = newColor;
+        oven[i].Iner2.GetComponent<Image>().sprite = null;
+        oven[i].Iner2.GetComponent<Image>().color = newColor;
+        oven[i].Iner1.GetComponent<Image>().sprite = null;
+        oven[i].Iner1.GetComponent<Image>().color = newColor;
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[0];
     }
+    void QTE(int i)
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (IsPointerOverGameObject(oven[i].OvenSlots))
+                TakeFromOven(i);
+            if (IsPointerOverGameObject(oven[i].Outcome))
+                TakeFromOven(i);
+            if (IsPointerOverGameObject(oven[i].Iner1))
+                TakeFromOven(i);
+            if (IsPointerOverGameObject(oven[i].Iner2))
+                TakeFromOven(i);
+            if (IsPointerOverGameObject(oven[i].Iner3))
+                TakeFromOven(i);
+        }
+    }
+
     IEnumerator OvenTimer(int i)
     {
-        //oven[i].Outcome
+        Color newColor = oven[i].Outcome.GetComponent<Image>().color;
+        newColor.a = 1;
+        oven[i].Outcome.GetComponent<Image>().color = newColor;
+        oven[i].Outcome.GetComponent<Image>().sprite = OvenOutcomeSprites[0];
         oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
-        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
-        yield return new WaitForSeconds(1f);
-        oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
-        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[1];
         for (int j = 0; j < 10; j++)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (IsPointerOverGameObject(oven[i].OvenSlots))
-                {
-                    TakeFromOven(i);
-                    StopCoroutine(ovenTimers[i]);
-                }
-                if (IsPointerOverGameObject(oven[i].Outcome))
-                {
-                    TakeFromOven(i);
-                    StopCoroutine(ovenTimers[i]);
-                }
-                if (IsPointerOverGameObject(oven[i].Iner1))
-                {
-                    TakeFromOven(i);
-                    StopCoroutine(ovenTimers[i]);
-                }
-                if (IsPointerOverGameObject(oven[i].Iner2))
-                {
-                    TakeFromOven(i);
-                    StopCoroutine(ovenTimers[i]);
-                }
-                if (IsPointerOverGameObject(oven[i].Iner3))
-                {
-                    TakeFromOven(i);
-                    StopCoroutine(ovenTimers[i]);
-                }
-            }
+            QTE(i);
+            yield return new WaitForSeconds(0.2f);
+        }
+        if (idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).sprite == null)
+            oven[i].Outcome.GetComponent<Image>().sprite = questionMark;
+        else
+            oven[i].Outcome.GetComponent<Image>().sprite = idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).sprite; 
+        oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[2];
+        for (int j = 0; j < 10; j++)
+        {
+            QTE(i);
             yield return new WaitForSeconds(0.1f);
         }
         oven[i].OvenSlotsState = oven[i].OvenSlotsState + 1;
-        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[oven[i].OvenSlotsState];
+        oven[i].OvenSlots.GetComponent<Image>().sprite = OvenSprites[3];
+        oven[i].Outcome.GetComponent<Image>().sprite = OvenOutcomeSprites[1];
+        bool TakeOutBurn = false;
+        while (TakeOutBurn == false)
+        {
+            QTE(i);
+            yield return null;
+        }
+
     }
     private void Update()
     {
@@ -264,7 +287,6 @@ public class Inventory : MonoBehaviour
                     OvenWorks(i);
         for (int i = 0; i < oven.Count; i++)
             OvenChecker(i);
-
 
         VisualizeInv();
         //if (justStarted)//if you want to add some items at the start
