@@ -1,16 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Profiling;
-using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.UI;
-using UnityEngine.XR;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 public class Inventory : MonoBehaviour
 {
@@ -44,14 +37,19 @@ public class Inventory : MonoBehaviour
 
     public Sprite questionMark;
     public GameObject marker;
-    List<GameObject> markers = new List<GameObject>();
+    public List<GameObject> markers = new List<GameObject>();
     IdSystem idSystem;
+
+    public GameObject timeIsUp;
+    public GameObject timeIsGoing;
+    public GameObject timer;
+    public GameObject looker;
 
     [SerializeField] int numOfSlot;
     public List<Item> inv = new List<Item>();
     public List<GameObject> slots = new List<GameObject>();
     Item nullItem = new Item();
-    Item inHand = new Item();
+    Item inHand;
     Coroutine showHide, showHideSmall;
     List<Coroutine> ovenTimers = new List<Coroutine>();
     Coroutine nullCor = null;
@@ -116,13 +114,14 @@ public class Inventory : MonoBehaviour
                 ran = UnityEngine.Random.Range(0, 6);
             }
             DropPos.Add(ran);
+            Debug.Log(DropPos[DropPos.Count - 1]);  
             OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().sprite = newOrderItem.sprite;
             Color newColor = OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color;
             newColor.a = 1;
             OrderIcon[DropPos[DropPos.Count - 1]].GetComponent<Image>().color = newColor;
-            markers.Add(Instantiate<GameObject>(marker, OrderPos[DropPos[DropPos.Count - 1]].transform.position, Quaternion.identity, OrderPos[DropPos[DropPos.Count - 1]].transform));
-            markers[markers.Count - 1].transform.localScale = new Vector3(3, 3, 3);
-            markers[markers.Count - 1].transform.localPosition = new Vector3(0, 3, 0);
+            //markers.Add(Instantiate<GameObject>(marker, OrderPos[DropPos[DropPos.Count - 1]].transform.position, Quaternion.identity, OrderPos[DropPos[DropPos.Count - 1]].transform));
+            //markers[markers.Count - 1].transform.localScale = new Vector3(3, 3, 3);
+            //markers[markers.Count - 1].transform.localPosition = new Vector3(0, 3, 0);
             newOrder.SetActive(true);
             showHide = StartCoroutine(ShowHide(newOrderItem));
             VisualizeOrder();
@@ -252,8 +251,9 @@ public class Inventory : MonoBehaviour
     void TakeFromOven(int i)
     {
         StopCoroutine(ovenTimers[i]);
+        
         for (int j = 0; j < OrderItems.Count; j++)
-            if (OrderItems[j].title == idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).title)
+            if (oven[i].Outcome.GetComponent<Image>().sprite.name == OrderItems[j].title && OrderItems[j].title == idSystem.CheckTheRcipe(oven[i].OvenInerSlot1.id, oven[i].OvenInerSlot2.id, oven[i].OvenInerSlot3.id).title)
                 foreach (Transform childTemp in OrderSlots[j].transform)
                 {
                     GameObject child = childTemp.gameObject;
@@ -332,38 +332,61 @@ public class Inventory : MonoBehaviour
         }
 
     }
-
+    float targetTime = 180.0f;
+    bool timeEnder = true;
     void TimeGod()
     {
-
+        targetTime -= Time.deltaTime;
+        int a = (int)targetTime;
+        timer.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = a.ToString()+" s";
+        if (targetTime <= 0.0f)
+        {
+            timeEnder = false;
+        }
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            for (int i = 0; i < numOfSlot; i++)
-                if (IsPointerOverGameObject(slots[i]))
-                    inHand = inv[i];
-        if (Input.GetMouseButtonDown(0) && showHide == null)
-            for (int i = 0; i < OrderSlots.Count; i++)
-                if (IsPointerOverGameObject(OrderSlots[i]) && i < OrderItems.Count)
-                    OldOrder(i);
-        if (Input.GetMouseButtonDown(0) && inHand != null)
+        TimeGod();
+        if (timeEnder)
+        {
+            if (Input.GetMouseButtonDown(0))
+                for (int i = 0; i < numOfSlot; i++)
+                    if (IsPointerOverGameObject(slots[i]))
+                        inHand = inv[i];
+            if (Input.GetMouseButtonDown(0) && showHide == null)
+                for (int i = 0; i < OrderSlots.Count; i++)
+                    if (IsPointerOverGameObject(OrderSlots[i]) && i < OrderItems.Count)
+                        OldOrder(i);
+            if (Input.GetMouseButtonDown(0) && inHand != null)
+                for (int i = 0; i < oven.Count; i++)
+                    if (IsPointerOverGameObject(oven[i].OvenSlots) && oven[i].OvenSlotsState == 0)
+                        OvenWorks(i);
             for (int i = 0; i < oven.Count; i++)
-                if (IsPointerOverGameObject(oven[i].OvenSlots) && oven[i].OvenSlotsState == 0)
-                    OvenWorks(i);
-        for (int i = 0; i < oven.Count; i++)
-            OvenChecker(i);
-        VisualizeInv();
-        
-        //if (justStarted)//if you want to add some items at the start
-        //{
-        //    justStarted = false;
-        //    inv[0] = idSystem.ItemById(1);
-        //    inv[0].amount = 9;
-        //    inv[16] = idSystem.ItemById(1);
-        //    VisualizeInv();
-        //}
+                OvenChecker(i);
+            VisualizeInv();
+
+            for (int i = 0; i < togsGetter.togs.Count; i++)
+            {
+                looker.transform.LookAt(OrderPos[togsGetter.togs[i]].transform.position);
+                Debug.Log(i + " ds   ds");
+                //DrawLine(player.transform.position, OrderPos[togsGetter.togs[i]].transform.position);
+            }
+
+            //if (justStarted)//if you want to add some items at the start
+            //{
+            //    justStarted = false;
+            //    inv[0] = idSystem.ItemById(1);
+            //    inv[0].amount = 9;
+            //    inv[16] = idSystem.ItemById(1);
+            //    VisualizeInv();
+            //}
+        }
+        else
+        {
+            timeIsGoing.gameObject.SetActive(false);
+            timeIsUp.SetActive(true);
+        }
 
     }
     void OvenChecker(int i)
@@ -372,8 +395,15 @@ public class Inventory : MonoBehaviour
             && oven[i].Iner2.GetComponent<Image>().sprite != null
             && oven[i].Iner3.GetComponent<Image>().sprite != null)
         {
-            ovenTimers[i] = StartCoroutine(OvenTimer(i));
-            Debug.Log("Something");
+            try
+            {
+                ovenTimers[i] = StartCoroutine(OvenTimer(i));
+            }
+            catch
+            {
+                Debug.Log("Something");
+            }
+            
         }
     }
     public static bool IsPointerOverGameObject(GameObject gameObject)
@@ -432,12 +462,26 @@ public class Inventory : MonoBehaviour
     //public void RemoveItem(Item item) { for (int i = 0; i < numOfSlot; i++) { inv[i] = (inv.ElementAt(i) == item) ? (inv[i] = (inv[i].amount <= 1) ? nullItem : new Item(inv[i].id, inv[i].amount - 1)) : inv[i]; } VisualizeInv(); }
     void OnDrawGizmos()
     {
+      
         Gizmos.color = Color.red;
         for (int i = 0; i < togsGetter.togs.Count; i++)
         {
             Gizmos.DrawLine(player.transform.position, OrderPos[togsGetter.togs[i]].transform.position);
         }
     }
-
+    //void DrawLine(Vector3 start, Vector3 end, float duration = 1f)
+    //{
+    //    Color color = Color.red;
+    //    GameObject myLine = new GameObject();
+    //    myLine.transform.position = start;
+    //    myLine.AddComponent<LineRenderer>();
+    //    LineRenderer lr = myLine.GetComponent<LineRenderer>();
+    //    lr.material = new Material(Shader.Find("Standart"));
+    //    lr.SetColors(color, color);
+    //    lr.SetWidth(0.1f, 0.1f);
+    //    lr.SetPosition(0, start);
+    //    lr.SetPosition(1, end);
+    //    GameObject.Destroy(myLine, duration);
+    //}
 
 }

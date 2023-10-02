@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using System;
-using UnityEngine.Rendering.VirtualTexturing;
-using static UnityEditor.Progress;
 
-[ExecuteInEditMode] //needed for future conveniences
+ //needed for future conveniences
 public class IdSystem : MonoBehaviour
 {
     public List<Item> idSystem = new List<Item>();
@@ -127,7 +125,7 @@ public class IdSystem : MonoBehaviour
                         break;
                     case 4:
                         if (newItem.isOrder == true)
-                            newItem.points = float.Parse(part);
+                            newItem.points = int.Parse(part);
                         break;
                     case 5:
                         if (newItem.isOrder == true)
@@ -162,9 +160,9 @@ public class Item
     public int component1ID { get; set; }
     public int component2ID { get; set; }
     public int component3ID { get; set; }
-    public float points { get; set; }
+    public int points { get; set; }
     IdSystem idSystem;
-    public Item(int givenItemID = 0, int givenAmount = 0, string givenTitel = null, Sprite givenSprite = null, float givenCost = 0, int givenComponent1ID = -1, int givenComponent2ID = -1, int givenComponent3ID = -1)
+    public Item(int givenItemID = 0, int givenAmount = 0, string givenTitel = null, Sprite givenSprite = null, int givenCost = 0, int givenComponent1ID = -1, int givenComponent2ID = -1, int givenComponent3ID = -1)
     {
         //Debug.Log("component3ID " + givenComponent3ID);
         points = givenCost;

@@ -4,13 +4,13 @@
 3 pepper 1 0 0
 4 pepperoni 1 0 0
 5 sausages 1 0 0
-6 mushrooms_olives_onion 1 1 3 0 1 2
-7 mushrooms_olives_pepper 1 1 3 0 1 3
-8 mushrooms_onion_sausages 1 1 3 0 2 5
-9 mushrooms_pepper_pepperoni 1 1 3 0 3 4
-10 mushrooms_pepperoni_sausages 1 1 3 0 4 5
-11 olives_onion_sausages 1 1 3 1 2 5
-12 olives_pepper_pepperoni 1 1 3 1 3 4
-13 olives_pepperoni_sausages 1 1 3 1 4 5
-14 onion_pepper_pepperoni 1 1 3 2 3 4
-15 onion_pepper_sausages 1 1 3 2 3 5
+6 mushrooms_olives_onion 1 1 300 0 1 2
+7 mushrooms_olives_pepper 1 1 300 0 1 3
+8 mushrooms_onion_sausages 1 1 300 0 2 5
+9 mushrooms_pepper_pepperoni 1 1 300 0 3 4
+10 mushrooms_pepperoni_sausages 1 1 300 0 4 5
+11 olives_onion_sausages 1 1 300 1 2 5
+12 olives_pepper_pepperoni 1 1 300 1 3 4
+13 olives_pepperoni_sausages 1 1 300 1 4 5
+14 onion_pepper_pepperoni 1 1 300 2 3 4
+15 onion_pepper_sausages 1 1 300 2 3 5
